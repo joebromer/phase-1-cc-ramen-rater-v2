@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramen Rater</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <h1>Ramen Rater</h1>
+        <nav>
+            <ul>
+                <li><a href="#ramen-list">Ramen List</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="ramen-list">
+            <h2>Ramen Dishes</h2>
+            <div id="ramen-container"></div>
+        </section>
+
+        <section id="about">
+            <h2>About Ramen Rater</h2>
+            <p>Welcome to Ramen Rater, your go-to place for discovering and rating delicious ramen dishes!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ramen Rater. All rights reserved.</p>
+    </footer>
+
+    <template id="ramen-template">
+        <article class="ramen-item">
+            <h3 class="ramen-name"></h3>
+            <img class="ramen-image" alt="">
+            <p class="ramen-restaurant"></p>
+            <p class="ramen-type"></p>
+            <p class="ramen-description"></p>
+            <p class="ramen-price"></p>
+            <p class="ramen-spiciness"></p>
+            <button class="show-ratings">Show Ratings</button>
+            <div class="ratings-container"></div>
+            <form class="rating-form">
+                <label for="score">Your Rating:</label>
+                <input type="number" id="score" name="score" min="1" max="5" step="0.5" required>
+                <label for="comment">Your Comment:</label>
+                <textarea id="comment" name="comment" required></textarea>
+                <button id="submit-button" type="submit">Submit Rating</button>
+            </form>
+        </article>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>
